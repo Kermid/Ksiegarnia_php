@@ -1,0 +1,51 @@
+﻿CREATE TABLE Uzytkownicy (
+    user_id SERIAL PRIMARY KEY,
+    imie VARCHAR(50) NOT NULL,
+    nazwisko VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    nr_telefonu VARCHAR(20)
+);
+
+CREATE TABLE Gatunki (
+    gatunek_id SERIAL PRIMARY KEY,
+    nazwa VARCHAR(50) NOT NULL UNIQUE
+);
+
+CREATE TABLE Ksiazki (
+    ksiazka_id SERIAL PRIMARY KEY,
+    tytul VARCHAR(200) NOT NULL,
+    autor_imie VARCHAR(75),
+    autor_nazwisko VARCHAR(75),
+    isbn VARCHAR(20) UNIQUE,
+    rok_wydania INTEGER,
+    gatunek_id INTEGER,
+    FOREIGN KEY (gatunek_id) REFERENCES Gatunki(gatunek_id)
+);
+
+CREATE TABLE Pracownicy (
+    pracownik_id SERIAL PRIMARY KEY,
+    imie VARCHAR(50) NOT NULL,
+    nazwisko VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL
+);
+
+CREATE TABLE Rezerwacje (
+    rezerwacja_id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL,
+    ksiazka_id INTEGER NOT NULL,
+    data_rezerwacji DATE NOT NULL,
+    status VARCHAR(20) DEFAULT 'aktywna',
+    FOREIGN KEY (user_id) REFERENCES Uzytkownicy(user_id),
+    FOREIGN KEY (ksiazka_id) REFERENCES Ksiazki(ksiazka_id)
+);
+
+CREATE TABLE Wypozyczenia (
+    wypozyczenie_id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL,
+    ksiazka_id INTEGER NOT NULL,
+    data_wypozyczenia DATE NOT NULL,
+    data_zwrotu DATE,
+    status VARCHAR(20) DEFAULT 'wypożyczona',
+    FOREIGN KEY (user_id) REFERENCES Uzytkownicy(user_id),
+    FOREIGN KEY (ksiazka_id) REFERENCES Ksiazki(ksiazka_id)
+);

@@ -1,0 +1,60 @@
+INSERT INTO Gatunki (nazwa) VALUES
+('Epopeja'),
+('Powieść psychologiczna'),
+('Fantasy'),
+('Dystopia'),
+('Realizm'),
+('Fantastyka'),
+('Powieść historyczna'),
+('Science Fiction'),
+('Dramat romantyczny'),
+('Literatura dziecięca'),
+('Thriller'),
+('Romans');
+
+
+INSERT INTO Uzytkownicy (imie, nazwisko, email, nr_telefonu) VALUES
+('Anna', 'Kowalska', 'anna.kowalska@email.com', '123456789'),
+('Piotr', 'Nowak', 'piotr.nowak@email.com', '987654321'),
+('Maria', 'Wiśniewska', 'maria.wisniewska@email.com', '555123456'),
+('Jan', 'Kowalczyk', 'jan.kowalczyk@email.com', '111222333'),
+('Katarzyna', 'Zielińska', 'katarzyna.zielinska@email.com', '444555666'),
+('Tomasz', 'Szymański', 'tomasz.szymanski@email.com', '777888999'),
+('Agnieszka', 'Dąbrowska', 'agnieszka.dabrowska@email.com', '222333444'),
+('Marcin', 'Kozłowski', 'marcin.kozlowski@email.com', '666777888');
+
+
+INSERT INTO Ksiazki (tytul, autor_imie, autor_nazwisko, isbn, rok_wydania, gatunek_id) VALUES
+('Pan Tadeusz', 'Adam', 'Mickiewicz', '978-83-01-14455-3', 1834, 1),
+('Zbrodnia i kara', 'Fiodor', 'Dostojewski', '978-83-240-1234-5', 1866, 2),
+('Władca Pierścieni', 'J.R.R.', 'Tolkien', '978-83-7469-123-4', 1954, 3),
+('1984', 'George', 'Orwell', '978-83-240-5678-9', 1949, 4),
+('Lalka', 'Bolesław', 'Prus', '978-83-01-98765-4', 1890, 5),
+('Harry Potter i Kamień Filozoficzny', 'J.K.', 'Rowling', '978-83-7686-234-5', 1997, 3),
+('Mistrz i Małgorzata', 'Michaił', 'Bułhakow', '978-83-240-7890-1', 1967, 6),
+('Quo Vadis', 'Henryk', 'Sienkiewicz', '978-83-01-13579-2', 1896, 7),
+('Solaris', 'Stanisław', 'Lem', '978-83-07-02468-1', 1961, 8),
+('Dziady', 'Adam', 'Mickiewicz', '978-83-01-97531-8', 1823, 9);
+
+
+INSERT INTO Pracownicy (imie, nazwisko, email) VALUES
+('Barbara', 'Nowak', 'barbara.nowak@biblioteka.pl'),
+('Marek', 'Kowalski', 'marek.kowalski@biblioteka.pl'),
+('Ewa', 'Iksińska', 'ewa.iksinska@biblioteka.pl'),
+('Robert', 'Zieliński', 'robert.zelinski@biblioteka.pl'),
+('Joanna', 'Kaczmarek', 'joanna.kaczmarek@biblioteka.pl'),
+('Paweł', 'Woźniak', 'pawel.wozniak@biblioteka.pl');
+
+INSERT INTO Wypozyczenia (user_id, ksiazka_id, data_wypozyczenia, data_zwrotu, status) VALUES
+(1, 1, '2024-05-15', '2024-06-15', 'wypożyczona'),
+(2, 2, '2024-05-20', '2024-06-01', 'zwrócona'),
+(3, 5, '2024-05-25', NULL, 'wypożyczona'),
+(4, 10, '2024-06-01', NULL, 'wypożyczona'),
+(5, 3, '2024-04-30', '2024-05-30', 'zwrócona'),
+(6, 4, '2024-06-05', NULL, 'wypożyczona'),
+(7, 6, '2024-05-10', '2024-05-25', 'zwrócona'),
+(8, 7, '2024-06-08', NULL, 'wypożyczona'),
+(1, 8, '2024-03-15', '2024-04-15', 'zwrócona'),
+(2, 9, '2024-06-02', NULL, 'wypożyczona'),
+(3, 2, '2024-05-01', '2024-05-20', 'zwrócona'),
+(4, 5, '2024-04-20', '2024-05-05', 'przetrzymana');

@@ -1,0 +1,111 @@
+ body {
+        font-family: Arial, sans-serif;
+        max-width: 1200px;
+        margin: 40px auto;
+        background: rgb(241, 230, 210);
+        padding: 0 20px;
+    }
+    h1 {
+       text-align: center;
+            color: #333;
+        }
+        .ksiazka {
+            background: white;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .info {
+            flex-grow: 1;
+        }
+        .info p {
+            margin: 3px 0;
+        }
+        .akcje form {
+            display: inline-block;
+            margin-left: 10px;
+        }
+.akcje button 
+{
+    background-color: #990299;
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+            transition: background-color 0.5s ease;
+        }
+.akcje button:hover 
+{
+    background-color: #5e025e;
+}
+.view-buttons {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.view-buttons button {
+    background-color: #990299;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin: 0 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.3s ease;
+}
+
+.view-buttons button:hover {
+    background-color: #5e025e;
+    transform: scale(1.05);
+}
+.oddawanie-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.oddawanie-form input{
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    transition: border-color 0.3s ease;
+}
+
+.oddawanie-form input:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+
+.oddawanie-form button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.oddawanie-form button:hover {
+   background-color: #0056b3;
+   transform: scale(1.05);
+}
+.success-message
+{
+    text-align: center;
+    color: #333;
+  
+}

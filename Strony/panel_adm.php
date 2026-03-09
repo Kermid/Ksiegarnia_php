@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style_adm.css">
+    <link rel="stylesheet" href="Css/style_adm.css">
     <title>Księgarnia</title>
 </head>
 <body>
